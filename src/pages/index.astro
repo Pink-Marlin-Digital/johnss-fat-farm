@@ -1,6 +1,78 @@
 ---
 import '../styles/global.css';
 import siteConfig from '../config/site.json';
+
+const stayOptions = [
+	{
+		name: 'Savannah Suites',
+		description: 'Floor-to-ceiling canopy windows, soaking tubs, and private decks that watch herds wander by at sunset.',
+		perks: ['King-size cloud beds', 'Personal wildlife host', 'Champagne turn-down'],
+		accent: 'from-amber-200/80 to-rose-200/90',
+		icon: 'SUN'
+	},
+	{
+		name: 'Leopard Lounge Hammocks',
+		description: 'Suspended cocoons tucked between palms where lounging in leopard skin bikinis is a rite of passage.',
+		perks: ['All-day hammock butler', 'Tropical misting fans', 'Sunset sound baths'],
+		accent: 'from-emerald-200/80 to-lime-200/90',
+		icon: 'WILD'
+	},
+	{
+		name: 'Riverside Retreat Cabanas',
+		description: 'Soft-lit cabanas perched above the water with plunge pools and moonlit viewing docks.',
+		perks: ['Floating breakfast trays', 'Outdoor rain showers', 'Night-sky concierge'],
+		accent: 'from-sky-200/80 to-indigo-200/90',
+		icon: 'SURF'
+	}
+];
+
+const signatureAdventures = [
+	{
+		title: 'Wild Companion Walkabouts',
+		copy: 'Journey with our rangers and befriend the gentle residents--from curious zebras to story-loving parrots.',
+		detail: 'Daily sunrise departures - small groups only.'
+	},
+	{
+		title: 'Leopard Print Lounge Club',
+		copy: 'Stretch out on velvet daybeds, sip jungle tonics, and rock your fiercest leopard skin swimwear.',
+		detail: 'Hosted playlists - personal stylist add-on.'
+	},
+	{
+		title: 'Twilight Bonfire Banquets',
+		copy: 'Fire-roasted feasts with drummers, storytellers, and the glow of thousands of lanterns.',
+		detail: 'Chef Joe\'s tasting flight included.'
+	}
+];
+
+const dayFlow = [
+	{ time: '7:00 AM', title: 'Sun Salutation & Smoothies', description: 'Clifftop yoga with maca boosts and ocean mist.' },
+	{ time: '11:00 AM', title: 'Wild Animal Social Hour', description: 'Guided meet-and-greets with resident rescues.' },
+	{ time: '2:00 PM', title: 'Hammock Drift', description: 'Poolside DJs and chilled coconuts in the Leopard Lounge.' },
+	{ time: '8:00 PM', title: 'Moonlit Serenade', description: 'Bonfire banquets, constellations, and midnight swims.' }
+];
+
+const highlights = [
+	'All-inclusive indulgence with zero hidden fees',
+	'Complimentary leopard skin bikini wardrobe bar',
+	'On-call wildlife naturalists and photographers',
+	'Island-fresh menus curated daily by Chef Joe',
+	'Solar-powered suites, rainwater spas, zero-waste policy'
+];
+
+const testimonials = [
+	{
+		name: 'Marisol Rivera',
+		note: 'I booked three nights and stayed ten. My leopard bikini collection--and my soul--are forever upgraded.'
+	},
+	{
+		name: 'The Wainwright Family',
+		note: 'Our kids learned to sketch flamingos while we enjoyed bottomless hammock service. Pure resort bliss.'
+	},
+	{
+		name: 'Dex + Lila',
+		note: 'Where else can you sip espresso with a macaw and dance under disco coconuts? Already planning round two.'
+	}
+];
 ---
 
 <!DOCTYPE html>
@@ -13,39 +85,186 @@ import siteConfig from '../config/site.json';
 		<meta name="description" content={siteConfig.description} />
 		<title>{siteConfig.title}</title>
 	</head>
-	<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-		<main class="container mx-auto px-4 py-16">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-					Welcome to {siteConfig.siteName}
-				</h1>
-				<h2 class="text-3xl md:text-4xl font-semibold text-indigo-700 mb-4">
-					This is a Test Change
-				</h2>
-				<p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-					This is the starter site for <span class="font-semibold text-indigo-600">Pink Marlin Digital</span> and <span class="font-semibold text-indigo-600">TryMarlin.ai</span>
-				</p>
-				<div class="bg-white rounded-lg shadow-lg p-8 mt-12">
-					<h2 class="text-2xl font-semibold text-gray-800 mb-4">Getting Started</h2>
-					<p class="text-gray-600 mb-6">
-						This template provides a clean foundation for building modern, performant websites using Astro, React, and Tailwind CSS.
+	<body class="min-h-screen bg-[#0b1b22] text-slate-50">
+		<div class="absolute inset-0 -z-10">
+			<div class="absolute inset-x-0 top-0 h-[600px] bg-gradient-to-br from-amber-200/40 via-rose-200/40 to-transparent blur-3xl opacity-70"></div>
+			<div class="absolute inset-x-0 bottom-0 h-[600px] bg-gradient-to-t from-emerald-300/30 via-cyan-200/30 to-transparent blur-3xl opacity-60"></div>
+			<div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_45%)]"></div>
+		</div>
+
+		<main class="relative mx-auto flex max-w-6xl flex-col gap-16 px-4 py-12 md:px-8 md:py-16">
+			<section class="rounded-3xl bg-slate-900/70 p-8 shadow-2xl ring-1 ring-white/10 md:p-12">
+				<div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+					<div>
+						<p class="text-sm uppercase tracking-[0.3em] text-amber-200">Wild luxury lives here</p>
+						<h1 class="mt-4 text-4xl font-black leading-tight text-white md:text-6xl">
+							{siteConfig.siteName}: the beautiful vacation resort where wild hearts and leopard skin bikinis roam free.
+						</h1>
+						<p class="mt-6 text-lg text-slate-200 md:text-xl">
+							{siteConfig.description} Glide through hammocks, dine beside bonfires, and share stories with the friendliest creatures on the coast.
+						</p>
+						<div class="mt-8 flex flex-col gap-4 sm:flex-row">
+							<a
+								href="tel:+18555383276"
+								class="inline-flex items-center justify-center rounded-full bg-amber-300 px-8 py-3 text-slate-900 font-semibold transition hover:bg-white"
+							>
+								Book your stay
+							</a>
+							<a
+								href="#experiences"
+								class="inline-flex items-center justify-center rounded-full border border-white/40 px-8 py-3 font-semibold text-white transition hover:border-white hover:bg-white/10"
+							>
+								Explore experiences
+							</a>
+						</div>
+					</div>
+					<div class="rounded-[32px] bg-gradient-to-br from-slate-800 to-slate-900/60 p-6 shadow-2xl">
+						<div class="grid grid-cols-2 gap-6 text-center">
+							<div>
+								<p class="text-4xl font-black text-amber-200">24/7</p>
+								<p class="mt-2 text-sm uppercase tracking-wide text-slate-300">Leopard lounge service</p>
+							</div>
+							<div>
+								<p class="text-4xl font-black text-emerald-200">32</p>
+								<p class="mt-2 text-sm uppercase tracking-wide text-slate-300">Acres of playful paradise</p>
+							</div>
+							<div>
+								<p class="text-4xl font-black text-rose-200">18</p>
+								<p class="mt-2 text-sm uppercase tracking-wide text-slate-300">Wild companions onsite</p>
+							</div>
+							<div>
+								<p class="text-4xl font-black text-sky-200">100%</p>
+								<p class="mt-2 text-sm uppercase tracking-wide text-slate-300">Good vibes guaranteed</p>
+							</div>
+						</div>
+						<p class="mt-6 text-sm text-slate-300">
+							Joe's promise: arrive curious, leave glowing--with new animal pals and legendary stories.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="stays" class="space-y-6">
+				<div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+					<div>
+						<p class="text-sm uppercase tracking-[0.3em] text-emerald-200">Suites & hammocks</p>
+						<h2 class="mt-2 text-3xl font-bold md:text-4xl">Stay where the leopard spots sparkle</h2>
+					</div>
+					<p class="text-slate-300 md:max-w-xl">
+						Every hideaway is curated for unapologetic lounging, from bespoke prints to starlit soaking pools.
 					</p>
-					<div class="flex flex-col sm:flex-row gap-4 justify-center">
-						<a 
-							href="https://github.com/Pink-Marlin-Digital" 
-							class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+				</div>
+				<div class="grid gap-6 md:grid-cols-3">
+					{stayOptions.map((option) => (
+						<div class={`rounded-3xl bg-gradient-to-br ${option.accent} p-6 text-slate-900 shadow-xl ring-1 ring-black/10`}>
+							<div class="text-4xl">{option.icon}</div>
+							<h3 class="mt-4 text-2xl font-black">{option.name}</h3>
+							<p class="mt-3 text-slate-800/80">{option.description}</p>
+							<ul class="mt-4 space-y-2 text-sm font-semibold text-slate-900/70">
+								{option.perks.map((perk) => (
+									<li>- {perk}</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section id="experiences" class="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 md:p-12">
+				<div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+					<div>
+						<p class="text-sm uppercase tracking-[0.3em] text-rose-200">Signature adventures</p>
+						<h2 class="mt-2 text-3xl font-bold md:text-4xl">Go wild, stay glamorous</h2>
+					</div>
+					<a href="mailto:hello@joesfatfarm.com" class="text-amber-200 underline-offset-4 hover:underline">
+						Design a custom itinerary ->
+					</a>
+				</div>
+				<div class="mt-8 grid gap-6 md:grid-cols-3">
+					{signatureAdventures.map((experience) => (
+						<article class="rounded-2xl bg-slate-900/80 p-6 shadow-lg ring-1 ring-white/10">
+							<h3 class="text-xl font-semibold text-white">{experience.title}</h3>
+							<p class="mt-3 text-slate-200">{experience.copy}</p>
+							<p class="mt-4 text-sm font-semibold text-amber-200">{experience.detail}</p>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="grid gap-10 md:grid-cols-2">
+				<div class="rounded-3xl bg-slate-900/70 p-8 ring-1 ring-white/10">
+					<p class="text-sm uppercase tracking-[0.3em] text-sky-200">Daily rhythm</p>
+					<h2 class="mt-2 text-3xl font-bold">A day at Joe&apos;s Fat Farm</h2>
+					<div class="mt-6 space-y-4">
+						{dayFlow.map((entry) => (
+							<div class="rounded-2xl border border-white/10 p-4">
+								<p class="text-sm font-semibold text-amber-200">{entry.time}</p>
+								<h3 class="text-xl font-semibold">{entry.title}</h3>
+								<p class="text-slate-300">{entry.description}</p>
+							</div>
+						))}
+					</div>
+				</div>
+				<div class="rounded-3xl bg-gradient-to-br from-amber-200/20 via-rose-200/20 to-emerald-200/20 p-8 text-slate-900 ring-1 ring-black/10">
+					<p class="text-sm uppercase tracking-[0.3em] text-slate-800/70">Resort highlights</p>
+					<h2 class="mt-2 text-3xl font-black text-slate-900">What makes us legendary</h2>
+					<ul class="mt-6 space-y-4 text-base font-semibold text-slate-800">
+						{highlights.map((highlight) => (
+							<li class="flex items-start gap-3">
+								<span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-slate-900"></span>
+								<span>{highlight}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+			</section>
+
+			<section class="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 md:p-12">
+				<p class="text-center text-sm uppercase tracking-[0.3em] text-emerald-200">Guest whispers</p>
+				<h2 class="mt-2 text-center text-3xl font-bold md:text-4xl">Stories from the leopard lounge</h2>
+				<div class="mt-8 grid gap-6 md:grid-cols-3">
+					{testimonials.map((quote) => (
+						<blockquote class="rounded-2xl bg-slate-900/80 p-6 text-slate-200 shadow-lg ring-1 ring-white/5">
+							<p>&ldquo;{quote.note}&rdquo;</p>
+							<footer class="mt-4 text-sm font-semibold text-amber-200">{quote.name}</footer>
+						</blockquote>
+					))}
+				</div>
+			</section>
+
+			<section class="rounded-3xl bg-gradient-to-r from-emerald-200/30 via-amber-200/40 to-rose-200/30 p-8 text-slate-900 ring-1 ring-black/5 md:p-12">
+				<div class="grid gap-8 md:grid-cols-[1.4fr_0.6fr] md:items-center">
+					<div>
+						<p class="text-sm uppercase tracking-[0.3em] text-slate-800/70">Plan your escape</p>
+						<h2 class="mt-2 text-3xl font-black">Ready to run away to the farm?</h2>
+						<p class="mt-4 text-lg">
+							Call, text, or email our concierge herd. We'll match you with the perfect suite, the boldest bikini,
+							and a wildlife buddy who shares your vibe.
+						</p>
+						<div class="mt-6 space-y-3 text-base font-semibold">
+							<p>Phone: {siteConfig.business.phone}</p>
+							<p>Email: {siteConfig.business.email}</p>
+							<p>Visit: {siteConfig.business.address.street}, {siteConfig.business.address.city}, {siteConfig.business.address.state} {siteConfig.business.address.zip}</p>
+						</div>
+					</div>
+					<div class="rounded-2xl bg-white/70 p-6 text-slate-900 shadow-xl">
+						<p class="text-lg font-semibold">Always-open concierge</p>
+						<p class="mt-2 text-sm text-slate-700">
+							Need a leopard print in your size at 2 AM? Craving midnight mangos? Our team handles every whim with a grin.
+						</p>
+						<a
+							href="mailto:hello@joesfatfarm.com"
+							class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-white font-semibold transition hover:bg-slate-800"
 						>
-							View on GitHub
-						</a>
-						<a 
-							href="https://docs.astro.build" 
-							class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors"
-						>
-							Read the Docs
+							Start planning
 						</a>
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
+
+		<footer class="mx-auto my-10 max-w-6xl px-4 text-center text-xs uppercase tracking-[0.4em] text-slate-500">
+			&copy; {new Date().getFullYear()} {siteConfig.siteName}. Wild hearts welcome.
+		</footer>
 	</body>
 </html>
