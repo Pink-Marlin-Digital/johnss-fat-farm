@@ -1,11 +1,11 @@
 {
-  "siteName": "Pink Marlin Digital",
-  "title": "Pink Marlin Digital - Starter Site",
-  "description": "This is the starter site for Pink Marlin Digital and TryMarlin.ai",
-  "baseUrl": "https://example.com",
+  "siteName": "Joe's Fat Farm",
+  "title": "Joe's Fat Farm | Wild Luxury Resort",
+  "description": "Joe's Fat Farm is a whimsical wilderness resort where you can befriend wild animals and lounge in leopard skin bikinis.",
+  "baseUrl": "https://joesfatfarm.com",
   "brand": {
-    "name": "Pink Marlin Digital",
-    "slogan": "Building modern, performant websites",
+    "name": "Joe's Fat Farm",
+    "slogan": "Adventure, hammocks, and leopard spots.",
     "logo": {
       "light": "/logo-light.svg",
       "dark": "/logo-dark.svg",
@@ -13,53 +13,52 @@
     }
   },
   "business": {
-    "name": "Pink Marlin Digital",
+    "name": "Joe's Fat Farm",
     "address": {
-      "street": "123 Main Street",
-      "city": "City",
-      "state": "State",
-      "zip": "12345",
+      "street": "777 Savannah Shores",
+      "city": "Sunkissed Bay",
+      "state": "FL",
+      "zip": "33040",
       "country": "USA"
     },
-    "phone": "+1 (555) 123-4567",
-    "email": "info@pinkmarlindigital.com",
+    "phone": "+1 (855) 538-3276",
+    "email": "hello@joesfatfarm.com",
     "hours": {
-      "monday": "9:00 AM - 5:00 PM",
-      "tuesday": "9:00 AM - 5:00 PM",
-      "wednesday": "9:00 AM - 5:00 PM",
-      "thursday": "9:00 AM - 5:00 PM",
-      "friday": "9:00 AM - 5:00 PM",
-      "saturday": "Closed",
-      "sunday": "Closed"
+      "monday": "Always Open",
+      "tuesday": "Always Open",
+      "wednesday": "Always Open",
+      "thursday": "Always Open",
+      "friday": "Always Open",
+      "saturday": "Always Open",
+      "sunday": "Always Open"
     }
   },
   "social": [
     {
       "platform": "facebook",
-      "url": "https://facebook.com/pinkmarlindigital",
+      "url": "https://facebook.com/joesfatfarm",
       "icon": "facebook"
     },
     {
       "platform": "twitter",
-      "url": "https://twitter.com/pinkmarlindigital",
+      "url": "https://twitter.com/joesfatfarm",
       "icon": "twitter"
     },
     {
       "platform": "linkedin",
-      "url": "https://linkedin.com/company/pinkmarlindigital",
+      "url": "https://linkedin.com/company/joesfatfarm",
       "icon": "linkedin"
     },
     {
       "platform": "instagram",
-      "url": "https://instagram.com/pinkmarlindigital",
+      "url": "https://instagram.com/joesfatfarm",
       "icon": "instagram"
     }
   ],
   "seo": {
-    "defaultTitle": "Pink Marlin Digital",
-    "defaultDescription": "This is the starter site for Pink Marlin Digital and TryMarlin.ai",
+    "defaultTitle": "Joe's Fat Farm",
+    "defaultDescription": "A beautiful vacation resort where you can spend time with wild animals and lounge around in leopard skin bikinis.",
     "defaultImage": "/og-image.jpg",
-    "twitterHandle": "@pinkmarlindigital"
+    "twitterHandle": "@joesfatfarm"
   }
 }
-
